@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"MapIOExample"},{"p":"<Unnamed>","l":"MapReader"},{"p":"<Unnamed>","l":"MapSaver"}]
