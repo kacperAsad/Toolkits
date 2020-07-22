@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" filepath="$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" />
       <module fileurl="file://$PROJECT_DIR$/MapIO/MapIO.iml" filepath="$PROJECT_DIR$/MapIO/MapIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SafeValut/SafeValut.iml" filepath="$PROJECT_DIR$/SafeValut/SafeValut.iml" />
     </modules>
   </component>
 </project>
