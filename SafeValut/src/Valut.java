@@ -1,12 +1,12 @@
 public class Valut {
 
     private static Valut instance;
-    private static SafeStorage storage;
+    private SafeStorage storage;
     private Integer adminCode = null;
 
     private Valut()
     {
-
+        storage = SafeStorage.getInstance();
     }
     public static Valut getInstance() {
         if (instance == null)
@@ -19,8 +19,7 @@ public class Valut {
 
     public boolean addToValut(String key , Object storageObject , String token)
     {
-        if ()
-        return storage.store()
+        return storage.store(key , storageObject);
     }
 
 
