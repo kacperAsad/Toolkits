@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ArgsParser/ArgsParser.iml" filepath="$PROJECT_DIR$/ArgsParser/ArgsParser.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" filepath="$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileUtilities/FileUtilities.iml" filepath="$PROJECT_DIR$/FileUtilities/FileUtilities.iml" />
       <module fileurl="file://$PROJECT_DIR$/MapIO/MapIO.iml" filepath="$PROJECT_DIR$/MapIO/MapIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PluginManager/PluginManager.iml" filepath="$PROJECT_DIR$/PluginManager/PluginManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/SafeValut/SafeValut.iml" filepath="$PROJECT_DIR$/SafeValut/SafeValut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TextSearchEngine/TextSearchEngine.iml" filepath="$PROJECT_DIR$/TextSearchEngine/TextSearchEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserGarbageColector/UserGarbageColector.iml" filepath="$PROJECT_DIR$/UserGarbageColector/UserGarbageColector.iml" />
     </modules>
   </component>
 </project>
