@@ -14,7 +14,7 @@ public class MapReader {
      * @return
      * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
      */
-    public static Map loadMapWithFile(String filePath)
+    public static HashMap<String, String> loadMapWithFile(String filePath)
     {
         return loadMapWithFile(new File(filePath));
     }
@@ -25,9 +25,9 @@ public class MapReader {
      * @return
      * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
      */
-    public static Map loadMapWithFile(File file)
+    public static HashMap<String, String> loadMapWithFile(File file)
     {
-        HashMap map = new HashMap();
+        HashMap<String, String> map = new HashMap();
 
         if (!file.exists())return null;
         if (!file.canRead())return null;

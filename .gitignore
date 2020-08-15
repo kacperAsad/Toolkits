@@ -25,3 +25,8 @@ hs_err_pid*
 # intellij IDEA files and folders
 /.idea
 /out
+.idea
+out
+
+# program files
+*.root
