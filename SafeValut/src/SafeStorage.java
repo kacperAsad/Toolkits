@@ -8,7 +8,7 @@ public class SafeStorage {
 
     private static SafeStorage instance;
     private final String pathToStorage;
-    private Map<String,Object> storageElements;
+    private Map<String,String> storageElements;
     private final String TOKEN;
 
     private SafeStorage()
@@ -43,7 +43,7 @@ public class SafeStorage {
         return instance;
     }
 
-    public boolean store(String key , Object store)
+    public boolean store(String key , String store)
     {
         storageElements.put(key , store);
         return true;

@@ -17,7 +17,7 @@ public class Valut {
     }
 
 
-    public boolean addToValut(String key , Object storageObject , String token)
+    public boolean addToValut(String key , String storageObject , String token)
     {
         return storage.store(key , storageObject);
     }

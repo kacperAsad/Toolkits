@@ -19,9 +19,10 @@ public class TextSearchEngine {
         text.lines().forEach((o) -> {
 
             for (int i = 0; i < o.length(); i++) {
-                o.toCharArray()
+                o.toCharArray();
             }
         });
+        return null;
     }
 
 }
