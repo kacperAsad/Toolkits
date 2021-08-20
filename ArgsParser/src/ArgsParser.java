@@ -1,14 +1,14 @@
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class ArgsParser {
 
-    public static final String charExtended = "charExtended";      // arguments return type
+    public static final String ListType = "ListType";              // arguments return type
     public static final String MapType = "MapType";                // arguments return type
     public static final char MapCharKeyBreaker = '=';              // splits a pair in key-value
     public static final char MapCharBreaker = ';';                 // splits a one strings into pairs
+    public static final char ListSeparator = ';';                  // splits args to list words
 
     private String finalType;
 
@@ -22,9 +22,9 @@ public class ArgsParser {
 
     public void setArgsType(String argsType)
     {
-        if (argsType.equalsIgnoreCase(charExtended))
+        if (argsType.equalsIgnoreCase(ListType))
         {
-            finalType = charExtended;
+            finalType = ListType;
         }else if (argsType.equalsIgnoreCase(MapType))
         {
             finalType = MapType;
@@ -42,12 +42,13 @@ public class ArgsParser {
      *      "Key1=Value1;", "Key2=Value2"
      *      "Key1=", "Value1;", "Key2", "=Value2"
      * It's working on contacting all strings in one piece and split it in ';'
+     * If one of the strings is bad formatted, method returns null instead map
      *
      * @return Map, that contains the formatted data
      */
     public Map<String , String> getMapfromArgs()
     {
-        if (!finalType.equalsIgnoreCase(MapType))
+        if (!finalType.equalsIgnoreCase(MapType))  // if type defined above is not the same, returning null
         {
             return null;
         }
@@ -59,9 +60,29 @@ public class ArgsParser {
         Map<String , String> pairsMap = new HashMap<>();
         for (String pair : pairs) {
             String[] par = pair.split(String.valueOf(MapCharKeyBreaker));
-            pairsMap.put(par[0] , par[1]);
+            if (par.length == 2) {
+                pairsMap.put(par[0], par[1]);
+            }else
+            {
+                return null;
+            }
         }
         return pairsMap;
+    }
+
+    public List<String> getListfromArgs(){
+        if (!finalType.equalsIgnoreCase(ListType)){
+            return null;
+        }
+        StringBuilder builder = new StringBuilder();
+        for (String w: mainArgs){
+            w = w.replaceAll(" ", "");
+            if (w.equalsIgnoreCase(""))
+            builder.append(w);
+        }
+        String[] list = builder.toString().split(String.valueOf(ListSeparator));
+
+        return Arrays.asList(list);
     }
 
 }
