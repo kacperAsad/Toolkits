@@ -77,7 +77,7 @@ public class ArgsParser {
         StringBuilder builder = new StringBuilder();
         for (String w: mainArgs){
             w = w.replaceAll(" ", "");
-            if (w.equalsIgnoreCase(""))
+            if (w.equalsIgnoreCase("")) return null;
             builder.append(w);
         }
         String[] list = builder.toString().split(String.valueOf(ListSeparator));
