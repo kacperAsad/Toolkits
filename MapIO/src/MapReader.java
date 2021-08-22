@@ -8,26 +8,26 @@ import java.util.Scanner;
 public class MapReader {
 
     /**
-     * Statyczna metoda loadMapWithFile służy do jak nazwa wskazuje ładowania danych i tworzenia nowego objektu Mapy
+     * Static Function loadMapWithFile is used to loading data from file to map
      * @param filePath
-     * Określa plik z którego są pobierane dane
+     * Data file
      * @return
-     * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
+     * New Map Object if file is good | null if anny error occurred when loading
      */
     public static Map loadMapWithFile(String filePath)
     {
         return loadMapWithFile(new File(filePath));
     }
     /**
-     * Statyczna metoda loadMapWithFile służy do jak nazwa wskazuje ładowania danych i tworzenia nowego objektu Mapy
+     * Static Function loadMapWithFile is used to loading data from file to map
      * @param file
-     * Określa abstrakcyjny plik z którego są pobierane dane
+     * Data file
      * @return
-     * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
+     * New Map Object if file is good | null if anny error occurred when loading
      */
     public static Map loadMapWithFile(File file)
     {
-        HashMap map = new HashMap();
+        HashMap map = new HashMap<>();
 
         if (!file.exists())return null;
         if (!file.canRead())return null;
@@ -46,10 +46,12 @@ public class MapReader {
 
     /**
      * Służy do formatowania danych z pliku na parę objektów typu 'klucz - wartość'
+     * Method formatAndAdd is used to format data from file to get key - value format
      * @param s
-     * Jest to jedna linia z pliku. Może być to na przykład 'email:examplemail@example.com'
+     * One line of the file. Example:
+     *      email:test@mail.com
      * @param m
-     * Określa mapę do której ma być dodana para 'klucz - wartość' pobrana z @param s
+     * Map than be a receiver from this function
      */
     private static void formatAndAdd(String s , Map m)
     {

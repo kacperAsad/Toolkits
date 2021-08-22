@@ -6,38 +6,39 @@ import java.util.function.BiConsumer;
 
 /**
  * Klasa MapSaver służy do zapisywania Map w plikach zrozumiałych dla człowieka, które można ponownie wczytywać
+ * Class MapSaver is used to save a Map object in files with human-readable format, that be reuseable
  * @author 'kacperAsad' na GitHub
  */
 
 public class MapSaver {
 
     /**
-     * Konstruktor klasy MapSaver jest prywatny, ponieważ klasa ta nie potrzebuje konstruktora
+     * Private MapSaver Constructor
      */
 
     private MapSaver() {}
 
     /**
-     * Statyczna metoda saveMapInFile służy jak sama nazwa mówi do zapisywania mapy w pliku w postaci klucz - zawartość
+     * Static function saveMapInFile is used to save a Map object in file with format key - value
      * @param filePath
-     * Służy do określania ścieżki do pliku w którym ma być zapisana mapa
+     * Path to save a file with map data
      * @param map
-     * Służy do przesłania mapy do zapisu
+     * Map to save
      * @return
-     * true jeśli mapa została poprawnie zapisana / false jeśli wystąpił jakiś błąd
+     * true if file is correctly saved | false if any error occurred
      */
     public static boolean saveMapInFile(String filePath , Map map)
     {
         return saveMapInFile(new File(filePath) , map);
     }
     /**
-     * Statyczna metoda saveMapInFile służy jak sama nazwa mówi do zapisywania mapy w pliku w postaci klucz - zawartość
+     * Static function saveMapInFile is used to save a Map object in file with format key - value
      * @param f
-     * Służy do określania pliku w którym ma być zapisana mapa
+     * Abstract file to save a file with map data
      * @param map
-     * Służy do przesłania mapy do zapisu
+     * Map to save
      * @return
-     * true jeśli mapa została poprawnie zapisana / false jeśli wystąpił jakiś błąd
+     * true if file is correctly saved | false if any error occurred
      */
     public static boolean saveMapInFile(File f , Map map){
         try (FileWriter fw = new FileWriter(f)){
@@ -50,12 +51,7 @@ public class MapSaver {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                 });
-
-
-
-
                 fw.flush();
                 fw.close();
                 return true;
@@ -64,8 +60,6 @@ public class MapSaver {
             e.printStackTrace();
             return false;
         }
-
         return false;
-
     }
 }
