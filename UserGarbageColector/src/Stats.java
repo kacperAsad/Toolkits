@@ -1,16 +1,17 @@
+/**
+ * Stats is a class that represent a statistics about GarbageCollectorClass, in example: free memory, actual used memory
+ */
 public class Stats {
 
     private  float maxMemory;
     private  float actualUsedMemory;
     private  float actualFreeMemory;
-    private  float InstalledMemory;
     private  int actualGarbageCollectorObjectInstances;
 
-    public Stats(float maxMemory, float actualUsedMemory, float actualFreeMemory, float installedMemory, int actualGarbageCollectorObjectInstances) {
+    public Stats(float maxMemory, float actualUsedMemory, float actualFreeMemory, int actualGarbageCollectorObjectInstances) {
         this.maxMemory = maxMemory;
         this.actualUsedMemory = actualUsedMemory;
         this.actualFreeMemory = actualFreeMemory;
-        InstalledMemory = installedMemory;
         this.actualGarbageCollectorObjectInstances = actualGarbageCollectorObjectInstances;
     }
 
@@ -24,10 +25,6 @@ public class Stats {
 
     public float getActualFreeMemory() {
         return actualFreeMemory;
-    }
-
-    public float getInstalledMemory() {
-        return InstalledMemory;
     }
 
     public int getActualGarbageCollectorObjectInstances() {
