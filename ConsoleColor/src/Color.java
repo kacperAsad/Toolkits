@@ -1,16 +1,16 @@
 /**
- * Klasa Color słyży do kolorowania tekstu w konsoli. Wystarczy pobrać dany kolor i dodać go do strumienia, np.:
+ * Class color is used to color a output text in terminal. Here is an example of use this class:
  *
  * {
- *     System.out.println("To jest zwykły tekst"+Color.GREEN+"To jest zielony tekst");
+ *     System.out.println("This is normal text"+Color.GREEN+"This is green text");
  * }
- * Analogicznie z pozostałymi kolorami
- * Aby Zrestetować kolor i przywrócić do normalnego stanu należy użyć RESET w System.out.println() lub metody RESET_COLOR()
+ * If you want to reset color use Color.RESET or function Color.RESET_COLOR()
+ * Codes copied from StackOverFlow
  */
 public class Color {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
-    public static final void RESET_COLOR(){
+    public static void RESET_COLOR(){
         System.out.print(RESET);
     }
 
