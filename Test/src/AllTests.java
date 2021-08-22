@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AllTests {
 
@@ -8,6 +6,7 @@ public class AllTests {
     public static void main(String[] args) {
         AllTests tests = new AllTests();
         tests.testArgsParser();
+        tests.testMapIO();
     }
     private boolean testArgsParser(){
         String[] args = new String[3];
@@ -20,6 +19,17 @@ public class AllTests {
 
         System.out.println(mapValues);
         System.out.println(Arrays.toString(args));
+        return true;
+    }
+    private boolean testMapIO(){
+        Map<String, String> peoples = new LinkedHashMap<>();
+        peoples.put("name", "kacper");
+        peoples.put("second-name", "Lipiec");
+        MapSaver.saveMapInFile("Test/testData/peoples.map", peoples);
+        peoples.clear();
+
+        peoples = MapReader.loadMapWithFile("Test/testData/peoples.map");
+        System.out.println(peoples);
         return true;
     }
 

@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 
 /**
- * Klasa MapSaver służy do zapisywania Map w plikach zrozumiałych dla człowieka, które można ponownie wczytywać
  * Class MapSaver is used to save a Map object in files with human-readable format, that be reuseable
  * @author 'kacperAsad' na GitHub
  */

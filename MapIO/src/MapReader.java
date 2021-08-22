@@ -45,7 +45,6 @@ public class MapReader {
     }
 
     /**
-     * Służy do formatowania danych z pliku na parę objektów typu 'klucz - wartość'
      * Method formatAndAdd is used to format data from file to get key - value format
      * @param s
      * One line of the file. Example:

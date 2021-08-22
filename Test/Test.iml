@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ArgsParser" />
+    <orderEntry type="module" module-name="MapIO" />
   </component>
 </module>
