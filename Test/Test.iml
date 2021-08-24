@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ArgsParser" />
     <orderEntry type="module" module-name="MapIO" />
+    <orderEntry type="module" module-name="StringTranslate" />
+    <orderEntry type="module" module-name="ConsoleColor" />
   </component>
 </module>

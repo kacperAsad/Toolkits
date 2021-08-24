@@ -7,7 +7,7 @@
  * If you want to reset color use Color.RESET or function Color.RESET_COLOR()
  * Codes copied from StackOverFlow
  */
-public class Color {
+public class ConsoleColor {
     // Reset
     public static final String RESET = "\033[0m";  // Text Reset
     public static void RESET_COLOR(){

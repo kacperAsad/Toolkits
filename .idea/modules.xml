@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/ArgsParser/ArgsParser.iml" filepath="$PROJECT_DIR$/ArgsParser/ArgsParser.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" filepath="$PROJECT_DIR$/ConsoleColor/ConsoleColor.iml" />
       <module fileurl="file://$PROJECT_DIR$/MapIO/MapIO.iml" filepath="$PROJECT_DIR$/MapIO/MapIO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SafeValut/SafeValut.iml" filepath="$PROJECT_DIR$/SafeValut/SafeValut.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringTranslate/StringTranslate.iml" filepath="$PROJECT_DIR$/StringTranslate/StringTranslate.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tests.iml" filepath="$PROJECT_DIR$/Tests.iml" />
