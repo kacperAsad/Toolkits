@@ -1,9 +1,6 @@
-import netscape.javascript.JSObject;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -15,6 +12,7 @@ public class LangLoader {
     }
     public static Map<String, String> loadLang(File file) {
         if (!file.exists() || !file.isFile() || !file.canRead()){
+            System.out.println("File cannot be readed | Add exceptions");
             return null;
         }
         try (Scanner sc = new Scanner(file)){
