@@ -8,26 +8,26 @@ import java.util.Scanner;
 public class MapReader {
 
     /**
-     * Static Function loadMapWithFile is used to loading data from file to map
+     * Statyczna metoda loadMapWithFile służy do jak nazwa wskazuje ładowania danych i tworzenia nowego objektu Mapy
      * @param filePath
-     * Data file
+     * Określa plik z którego są pobierane dane
      * @return
-     * New Map Object if file is good | null if anny error occurred when loading
+     * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
      */
-    public static Map loadMapWithFile(String filePath)
+    public static HashMap<String, String> loadMapWithFile(String filePath)
     {
         return loadMapWithFile(new File(filePath));
     }
     /**
-     * Static Function loadMapWithFile is used to loading data from file to map
+     * Statyczna metoda loadMapWithFile służy do jak nazwa wskazuje ładowania danych i tworzenia nowego objektu Mapy
      * @param file
-     * Data file
+     * Określa abstrakcyjny plik z którego są pobierane dane
      * @return
-     * New Map Object if file is good | null if anny error occurred when loading
+     * Nowy objekt Map z załadowanymi danymi z pliku / null-a jeśli wystąpił jakikolwiek bezinwazyjny problem z pobraniem danych z pliku
      */
-    public static Map loadMapWithFile(File file)
+    public static HashMap<String, String> loadMapWithFile(File file)
     {
-        HashMap map = new HashMap<>();
+        HashMap<String, String> map = new HashMap();
 
         if (!file.exists())return null;
         if (!file.canRead())return null;
@@ -45,12 +45,11 @@ public class MapReader {
     }
 
     /**
-     * Method formatAndAdd is used to format data from file to get key - value format
+     * Służy do formatowania danych z pliku na parę objektów typu 'klucz - wartość'
      * @param s
-     * One line of the file. Example:
-     *      email:test@mail.com
+     * Jest to jedna linia z pliku. Może być to na przykład 'email:examplemail@example.com'
      * @param m
-     * Map than be a receiver from this function
+     * Określa mapę do której ma być dodana para 'klucz - wartość' pobrana z @param s
      */
     private static void formatAndAdd(String s , Map m)
     {
